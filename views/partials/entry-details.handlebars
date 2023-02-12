@@ -1,0 +1,36 @@
+<div class="row mb-4 project card">
+  <div class="col-md-5">
+    <button
+      class="btn delete-entry grey"
+      data-delete-entry-id="{{id}}"
+    >Delete Entry</button>
+    <h3 class="entry-title">{{name}}</h3>
+    <p class="entry-user">Entry by:
+      {{user.first_name}}
+      {{user.last_name}}
+      on
+      {{format_date date_created}}.
+    </p>
+    <p id="entry-id">{{id}}</p>
+    <div class="col-md-7">
+      <p class="entry-text">
+        {{text}}
+      </p>
+    </div>
+    <form class="form new-comment-form">
+      <div class="form-group comment-form">
+        <label for="comment-text" id="commentLabel">Comment:</label>
+        <textarea
+          class="form-input"
+          id="comment-text"
+          name="comment-text"
+        ></textarea>
+        <button
+          type="submit"
+          class="addComment btn-floating btn-small waves-effect waves-light btnColor"
+          data-entry-id="{{id}}"
+        >+</button>
+      </div>
+    </form>
+  </div>
+</div>

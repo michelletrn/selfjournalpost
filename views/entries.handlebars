@@ -1,0 +1,28 @@
+<div class="body-blog">
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="entry-container">
+        {{#each entries as |entry|}}
+        {{> entry-details}}
+
+        <div class="comments-container">
+          {{#each entry.comments as |comment|}}
+          {{> comment-details }}
+          {{/each}}
+        </div>
+
+        {{/each}}
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card addEntryCard">
+        <h3>Add New Entry:</h3>
+        <a href="/entry" class="btn-floating btn-large waves-effect waves-light btnColor"><i
+            class="material-icons">+</i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/comment.js"></script>
+<script src="/js/deleteEntries.js"></script>

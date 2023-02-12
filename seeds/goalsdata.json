@@ -1,0 +1,26 @@
+[
+    {
+        "goal": "laundry",
+        "user_id": 1
+    },
+    {
+        "goal": "clean room",
+        "user_id": 2
+    },
+    {
+        "goal": "make money",
+        "user_id": 3
+    },
+    {
+        "goal": "study",
+        "user_id": 4
+    },
+    {
+        "goal": "graduate bootcamp",
+        "user_id": 1
+    },
+    {
+        "goal": "project",
+        "user_id": 2
+    }
+]

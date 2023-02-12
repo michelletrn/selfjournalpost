@@ -1,0 +1,33 @@
+{
+  "name": "self-journal",
+  "version": "1.0.0",
+  "description": "An application made for digital journaling where users can track their goals, habits, upload inspirational quotes, images that inspire them, and more. When users are logged in, they are able to track their goals of the current day, plan ahead, and interact with other users by commenting, liking, or reposting other user's entries.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jennahopeclem/self-journal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.2.4",
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "bugs": {
+    "url": "https://github.com/jennahopeclem/self-journal/issues"
+  },
+  "homepage": "https://github.com/jennahopeclem/self-journal#readme"
+}

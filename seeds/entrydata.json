@@ -1,0 +1,39 @@
+[
+    {
+        "id": 2,
+        "name": "Jiu Jistu class today",
+        "text": "Got to roll with a new girl in class, which is always fun! Its always nice to see a girl in the dojo, especially when you're surrounded by men all day.",
+        "user_id": 2,
+        "date_created": "2023-01-20 15:48:25"
+    },
+    {
+        "id": 1,
+        "name": "Nice tea",
+        "text": "I bought some great Green tea at the super market today!",
+        "user_id": 1
+    },
+    {
+        "id": 3,
+        "name": "Went shopping",
+        "text": "Spent too much, I'm broke now lul",
+        "user_id": 3
+    },
+    {
+        "id": 4,
+        "name": "New bench PR",
+        "text": "Hit 200lbs on my 1 rep max!!!!",
+        "user_id": 4
+    },
+    {
+        "id": 5,
+        "name": "Coding is hard",
+        "text": "Practice is key",
+        "user_id": 1
+    },
+    {
+        "id": 6,
+        "name": "It's so cold outside",
+        "text": "Gonna stay home and snuggle with my cats",
+        "user_id": 2
+    }
+]
