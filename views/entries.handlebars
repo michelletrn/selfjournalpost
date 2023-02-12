@@ -4,13 +4,30 @@
       <div class="entry-container">
         {{#each entries as |entry|}}
         {{> entry-details}}
-
-        <div class="comments-container">
+        <p>Comments:</p>
+        <div class="comments-container card">
+          <form class="form new-comment-form">
+            <div class="form-group comment-form">
+              <label for="comment-text" id="commentLabel">Comment:</label>
+              <textarea
+                class="form-input"
+                id="comment-text"
+                name="comment-text"
+              ></textarea>
+              <button
+                type="submit"
+                class="addComment btn-floating btn-small waves-effect waves-light btnColor"
+                data-entry-id="{{id}}"
+              >+</button>
+            </div>
+          </form>
           {{#each entry.comments as |comment|}}
           {{> comment-details }}
           {{/each}}
         </div>
-
+        <br/>
+        <hr/>
+        <br/>
         {{/each}}
       </div>
     </div>
