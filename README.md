@@ -1,5 +1,5 @@
 # The Self Journal Post
-**this repo is a copy of my group project**
+This repo is a copy of my group project, original [here](https://github.com/jennahopeclem/self-journal)
 
 ## Description
 
