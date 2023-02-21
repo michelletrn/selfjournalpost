@@ -1,8 +1,9 @@
 # The Self Journal Post
+**this repo is a copy of my group project**
 
 ## Description
 
-This application is used to create journals that can be public and private, depending on the users choices. When users sign up for an account, they are able to access features that would otherwise be unavailable to them. For instance, they can access the wellness page that was created in order to keep track of their personal goals and commitments. The functionality of this website serves to create a platform where users are able to keep or share journal entries that translates their thoughts and feelings into text. Our goal was to create a forum-like setting that would connect other users to share and communicate with each other, via their public journal posts.
+This application is used to create journals that can be public and private, depending on the users choice. When users sign up for an account, they are able to access features that would otherwise be unavailable to them. For instance, they can access the wellness page that was created in order to keep track of their personal goals and commitments. The functionality of this website serves to create a platform where users are able to keep or share journal entries that translates their thoughts and feelings into text. Our goal was to create a forum-like setting that would connect other users to share and communicate with each other, via their public journal posts.
 
 Our group decided to create this application, as we feel that it is very useful for users who would like to have a personalized journal tracking their personal progress. The simple webpage functionality allows any user to create an account on our site and begin creating journal entries. Creating this project allowed us to practice all of the different concepts in the course and apply it to a real world application. Also, we were able to gain more of an understanding working in a team setting.
 
