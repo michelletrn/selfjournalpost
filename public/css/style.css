@@ -67,6 +67,11 @@ p {
 #get-started-btn:hover {
     background-color: #4A4946
 }
+.addEntryBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .delete-entry:hover {
     color: red;
 }
