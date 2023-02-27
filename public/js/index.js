@@ -47,11 +47,11 @@ function hpNews() {
 
   fetch('/news')
     .then(function (response) {
-      console.log(response);
+      // console.log(response);
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
+      // console.log(data);
 
       const title0 = data[0].title;
       const urlImg0 = data[0].urlToImage;
