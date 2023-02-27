@@ -41,10 +41,13 @@ p {
     border-bottom: 2px solid #2f2f2f;
     border-top: 2px solid #2f2f2f;
     padding: 12px 0 12px 0;
-    background-color: #bc4045;
+    background-color: #A3A29F;
     position: fixed;
     z-index: 100;
     top: 0;
+}
+.navbar a:hover {
+    color:#bc4045
 }
 .todaysDate {
     font-family: 'Roboto Mono', monospace;
@@ -56,6 +59,18 @@ p {
 }
 .btnColor {
     background-color: #bc4045;
+}
+#get-started-btn {
+    display: flex;
+    justify-content: center;
+}
+#get-started-btn:hover {
+    background-color: #4A4946
+}
+.addEntryBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .delete-entry:hover {
     color: red;
@@ -186,6 +201,20 @@ p {
     border-left: 1px solid #2f2f2f;
 }
 
+.material-icons {
+    color: #4A4946;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+}
+.pageInfo {
+    font-size: 25px;
+    text-align: center;
+}
+.infoHeader {
+    text-align: center;
+    font-size: 45px;
+}
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */

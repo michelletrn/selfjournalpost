@@ -32,7 +32,7 @@ router.get("/news", async (req, res) => {
   console.log(`GET /news`);
   axios
     .get(
-      "https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=344a9336cb9e4ecaa4645b7969a903ea"
+      "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=344a9336cb9e4ecaa4645b7969a903ea"
     )
     .then(function (data) {
       // console.log("data: ", data.data.articles);
