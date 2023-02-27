@@ -46,6 +46,9 @@ p {
     z-index: 100;
     top: 0;
 }
+.navbar a:hover {
+    color:#bc4045
+}
 .todaysDate {
     font-family: 'Roboto Mono', monospace;
     text-align: center;  
