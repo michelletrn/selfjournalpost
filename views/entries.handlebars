@@ -4,7 +4,7 @@
       <div class="entry-container">
         {{#each entries as |entry|}}
         {{> entry-details}}
-        <p>Comments:</p>
+        <p>Comments for {{name}}:</p>
         <div class="comments-container card">
           <form class="form new-comment-form">
             <div class="form-group comment-form">
@@ -35,6 +35,11 @@
       <div class="card addEntryCard">
         <h3>Add New Entry:</h3>
         <a href="/entry" class="btn-floating btn-large waves-effect waves-light btnColor"><i
+            class="material-icons">+</i></a>
+      </div>
+      <div class="card addEntryCard">
+        <h3>View Personal Entries</h3>
+        <a href="/userentries" class="btn-floating btn-large waves-effect waves-light btnColor"><i
             class="material-icons">+</i></a>
       </div>
     </div>

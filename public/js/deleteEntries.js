@@ -11,7 +11,7 @@ async function deleteEntry(event) {
       },
     });
     if (response.ok) {
-      document.location.replace("/entries");
+      document.location.reload();
     } else {
       console.log(response.statusText);
       alert("You did not write this entry!");
