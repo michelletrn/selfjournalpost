@@ -1,43 +1,83 @@
 <div class="leftcolumn">
-  <div class="card column">
-    <h2 id="title0" class="articleTitle"></h2>
-    <img id="articleImage0" class="articleImage"/>
-    <h2 id="author0" class="articleAuthor"></h2>
-    <p id="publishDate0"></p>
-    <p id="content0"></p>
-    <a id="articleUrl0" target="_blank"></a>
+  <div class="card column" id="f0">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
   </div>
-  <div class="card column">
-    <h2 id="title1" class="articleTitle"></h2>
-    <img id="articleImage1" class="articleImage"/>
-    <h2 id="author1" class="articleAuthor"></h2>
-    <p id="publishDate1"></p>
-    <p id="content1"></p>
-    <a id="articleUrl1" target="_blank"></a>
+  <div class="card column" id="f1">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
   </div>
-  <div class="card column">
-    <h2 id="title2" class="articleTitle"></h2>
-    <img id="articleImage2" class="articleImage"/>
-    <h2 id="author2" class="articleAuthor"></h2>
-    <p id="publishDate2"></p>
-    <p id="content2"></p>
-    <a id="articleUrl2" target="_blank"></a>
+  <div class="card column" id="f2">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
   </div>
-  <div class="card column">
-    <h2 id="title3" class="articleTitle"></h2>
-    <img id="articleImage3" class="articleImage"/>
-    <h2 id="author3" class="articleAuthor"></h2>
-    <p id="publishDate3"></p>
-    <p id="content3"></p>
-    <a id="articleUrl3" target="_blank"></a>
+  <div class="card column" id="f3">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
   </div>
-  <div class="card column">
-    <h2 id="title4" class="articleTitle"></h2>
-    <img id="articleImage4" class="articleImage"/>
-    <h2 id="author4" class="articleAuthor"></h2>
-    <p id="publishDate4"></p>
-    <p id="content4"></p>
-    <a id="articleUrl4" target="_blank"></a>
+  <div class="card column" id="f4">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
+  </div>
+  <div class="card column" id="f5">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
+  </div>
+  <div class="card column" id="f6">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
+  </div>
+  <div class="card column" id="f7">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
+  </div>
+  <div class="card column" id="f8">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
+  </div>
+  <div class="card column" id="f9">
+    <h2 id="title" class="articleTitle"></h2>
+    <img id="articleImage" class="articleImage" />
+    <h2 id="author" class="articleAuthor"></h2>
+    <p id="publishDate"></p>
+    <p id="content"></p>
+    <a id="articleUrl" target="_blank"></a>
   </div>
 </div>
 
@@ -48,20 +88,25 @@
     <img id="weatherIcon" />
     <span style="font-style: italic;"> </span>
   </div>
-  {{! both links redirect to add entry page if the user was logged in, and if they were logged out it took them to the login page, this is redundant so I made one to display when they are either logged in or out }}
+  {{! both links redirect to add entry page if the user was logged in, and if they were logged out it took them to the
+  login page, this is redundant so I made one to display when they are either logged in or out }}
   {{#if logged_in}}
-    <div class="card">
-      <h3>Add New Entry:</h3>
-      <a
-        href="/entry"
-        class="btn-floating btn-large waves-effect waves-light btnColor"
-      ><i class="material-icons">+</i></a>
-    </div>
+  <div class="card">
+    <h3>Add New Entry:</h3>
+    <a href="/entry" class="btn-floating btn-large waves-effect waves-light btnColor"><i
+        class="material-icons">+</i></a>
+  </div>
   {{else}}
-    <div class="card" id="homepage-join">
-      <h3>Join the Post!</h3>
-      {{! changed the href to signup when they click get started }}
-      <a href="/signup" class="btn btn-primary btnColor" id="get-started-btn">Get Started</a>
-    </div>
+  <div class="card" id="homepage-join">
+    <h3 class="infoHeader">Join the Post!</h3>
+    <i class="material-icons">note_add</i>
+    <p class="pageInfo">Share thoughts or ideas</p>
+    <i class="material-icons">language</i>
+    <p class="pageInfo">Keep up with daily top news articles</p>
+    <i class="material-icons">mode_comment</i>
+    <p class="pageInfo">Comment on other user's entries</p>
+    {{! changed the href to signup when they click get started }}
+    <a href="/signup" class="btn btnColor" id="get-started-btn">Get Started</a>
+  </div>
   {{/if}}
 </div>
