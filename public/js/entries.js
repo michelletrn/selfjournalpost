@@ -5,18 +5,22 @@ const addEntry = async (event) => {
 
   const newEntryName = document.querySelector(".new-entry-title").value.trim();
   const newEntryText = document.querySelector(".new-entry-text").value.trim();
+  const fileInput = document.querySelector('input[type="file"]');
+  const file = fileInput.files[0];
 
-  console.log(newEntryName, newEntryText);
+  console.log(file);
 
-  if (newEntryName && newEntryText) {
+  if (newEntryName && newEntryText && file) {
     console.log("form filled out, starting fetch");
+    
+     const formData = new FormData();
+     formData.append("name", newEntryName);
+     formData.append("text", newEntryText);
+     formData.append("file", file);
+    
     const response = await fetch("/api/entry", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: newEntryName,
-        text: newEntryText,
-      }),
+      body: formData,
     });
 
     console.log("RES:", response);
@@ -31,4 +35,3 @@ const addEntry = async (event) => {
 };
 
 document.querySelector("#entry-btn").addEventListener("click", addEntry);
-
