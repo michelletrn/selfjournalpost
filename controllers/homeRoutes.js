@@ -70,7 +70,7 @@ router.get("/entries", withAuth, async (req, res) => {
         },
       ],
     });
-    console.log(entryData);
+    // console.log(entryData);
 
     const entries = entryData.map((entry) => entry.get({ plain: true }));
 
@@ -132,7 +132,7 @@ router.get("/userentries", withAuth, async (req, res) => {
     // console.log(postData)
 
     const entries = entriesData.map((entry) => entry.get({ plain: true }));
-    console.log(entries);
+    // console.log(entries);
     res.render("userEntries", {
       entries,
       logged_in: true,
