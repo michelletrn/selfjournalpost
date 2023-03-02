@@ -17,6 +17,7 @@ Entry.init(
     },
     text: {
       type: DataTypes.STRING,
+      varchar: 200,
       allowNull: false,
     },
     imageUrl: {
