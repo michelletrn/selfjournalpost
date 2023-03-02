@@ -15,6 +15,10 @@ img {
     max-width: 400px;
     filter: grayscale(60%);
 }
+/* applies to all materialize icons */
+.material-icons {
+    cursor: pointer;
+}
 
 header {
     font-family: 'Playfair Display', serif;
@@ -95,7 +99,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+    background-color: rgba(255, 255, 255, 0.759)
 }
 .entry h5 {
     text-transform: uppercase;
@@ -107,11 +111,26 @@ header {
     margin: 0%;
 }
 .comments-container {
-    margin: 2%;
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.759)
 }
 .new-comment-form {
     padding: 1% 2%;
 }
 .comments {
-
+    padding: 0 1%;
+    margin: 2%;
+}
+.comments p {
+    margin: 0;
+}
+.comment-date {
+    display: flex;
+    padding: 1 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+.removeComment {
+    font-size: 20px;
+    cursor: pointer;
 }

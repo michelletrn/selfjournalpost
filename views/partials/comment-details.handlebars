@@ -1,5 +1,8 @@
 <div class="card comments">
-  <p>{{comment}} by user {{user_id}} {{format_date date_created}}</p>
-  <i class="removeComment btn-floating btn-small waves-effect waves-light btnColor"
-    data-comment-id="{{id}}">-</i>
+  <label class="card-header">User {{user_id}} on {{format_date date_created}}</label>
+  <div class="comment-date">
+    <p>{{comment}} </p>
+    <i class="removeComment bx bx-trash"
+      data-comment-id="{{id}}"></i>
+  </div>
 </div>

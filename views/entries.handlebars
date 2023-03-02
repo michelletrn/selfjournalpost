@@ -3,10 +3,10 @@
       <div class="entry-container col s8">
         {{#each entries as |entry|}}
         {{> entry-details}}
-        <p>Comments for {{name}}:</p>
+        
         <div class="comments-container card">
+              <label for="comment-text" id="commentLabel"> Add a Comment:</label>
           <form class="form new-comment-form">
-              <label for="comment-text" id="commentLabel">Comment:</label>
               <textarea
                 class="form-input"
                 id="comment-text"
@@ -18,11 +18,13 @@
                 data-entry-id="{{id}}"
               >+</button>
           </form>
+          <label for="comment-text" id="commentLabel">Comments for "{{name}}":</label>
           {{#each entry.comments as |comment|}}
           {{> comment-details }}
           {{/each}}
         </div>
         <hr/>
+        <br/>
         {{/each}}
       </div>
     
