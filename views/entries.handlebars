@@ -1,13 +1,11 @@
-<div class="body-blog">
-  <div class="row">
-    <div class="leftcolumn">
-      <div class="entry-container">
+<div class="entries-page-container row">
+  <div class="">
+      <div class="entry-container col s8">
         {{#each entries as |entry|}}
         {{> entry-details}}
         <p>Comments for {{name}}:</p>
         <div class="comments-container card">
           <form class="form new-comment-form">
-            <div class="form-group comment-form">
               <label for="comment-text" id="commentLabel">Comment:</label>
               <textarea
                 class="form-input"
@@ -19,19 +17,16 @@
                 class="addComment btn-floating btn-small waves-effect waves-light btnColor"
                 data-entry-id="{{id}}"
               >+</button>
-            </div>
           </form>
           {{#each entry.comments as |comment|}}
           {{> comment-details }}
           {{/each}}
         </div>
-        <br/>
         <hr/>
-        <br/>
         {{/each}}
       </div>
-    </div>
-    <div class="rightcolumn">
+    
+    <div class="col s4">
       <div class="card addEntryCard">
         <h3>Add New Entry:</h3>
         <a href="/entry" class="btn-floating btn-large waves-effect waves-light btnColor"><i

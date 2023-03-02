@@ -1,44 +1,54 @@
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <title>The Self Journal Post</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>The Self Journal Post</title>
+  </head>
 
-<body>
-  <div class="headerobjectswrapper">
-    <a href="/">
-      <header class="header">The Self Journal Post</header>
-    </a>
-    <h4 class="todaysDate">{{todays_date}}</h4>
-  </div>
+  <body>
+    <header>
+      <a href="/">
+        The Self Journal Post
+      </a>
+      <h4 class="todaysDate">{{todays_date}}</h4>
+    </header>
 
-  <nav class="navbar">
-    {{#if logged_in}}
-    <a href="/" class="btn-flat">Home</a>
-    <a href="/entries" class="btn-flat">Entries</a>
-    <a href="/wellness" class="btn-flat">Wellness</a>
-    <a href="/logout" class="btn-flat" id="logout">Logout</a>
-    {{else}}
-    <a href="/" class="btn-flat">Home</a>
-    <a href="/login" class="btn-flat">Login</a>
-    <a href="/signup" class="btn-flat">Sign up</a>
-    {{/if}}
-  </nav>
-  <main>
+    <nav class="navbar">
+      {{#if logged_in}}
+        <a href="/" class="btn-flat">Home</a>
+        <a href="/entries" class="btn-flat">Entries</a>
+        <a href="/wellness" class="btn-flat">Wellness</a>
+        <a href="/logout" class="btn-flat" id="logout">Logout</a>
+      {{else}}
+        <a href="/" class="btn-flat">Home</a>
+        <a href="/login" class="btn-flat">Login</a>
+        <a href="/signup" class="btn-flat">Sign up</a>
+      {{/if}}
+    </nav>
+    <main>
 
-    {{{body}}}
+      {{{body}}}
 
-  </main>
-</body>
+    </main>
+  </body>
 
-<script src="/js/index.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
 
 </html>

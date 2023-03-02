@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const helpers =  require('./utils/helpers');
 const routes = require('./controllers');
 const cloudinary = require('cloudinary').v2;
+require("dotenv").config();
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -30,9 +31,9 @@ app.use(session(sess));
 
 // Configuration for Cloudinary
 cloudinary.config({
-  cloud_name: "dkhyibthn",
-  api_key: "444961672538498",
-  api_secret: "8AI7a9_YgHky_LdsdEGxKrTS1IU"
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
 });
 
 app.engine('handlebars', handlebars.engine);

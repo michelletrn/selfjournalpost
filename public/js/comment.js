@@ -22,7 +22,7 @@ async function addComment(event) {
     console.log("RES:", response);
 
     if (response.ok) {
-      document.location.replace("/entries");
+      document.location.reload();
     } else {
       console.log(response.statusText);
       alert(response.statusText);

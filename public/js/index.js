@@ -60,7 +60,7 @@ function hpNews() {
       $(`#f${j}`).children(`#author`).text(data[i].author);
       $(`#f${j}`).children(`#publishDate`).text(data[i].publishedAt);
       $(`#f${j}`).children(`#content`).text(data[i].content);
-      $(`#f${j}`).children(`#articleUrl`).text("Continue reading: " + data[i].url).attr("href", data[i].url);
+      $(`#f${j}`).children(`#articleUrl`).text("Full Article Here").attr("href", data[i].url);
       i++
     }
   });
