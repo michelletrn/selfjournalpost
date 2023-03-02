@@ -8,7 +8,8 @@ module.exports = {
     return date.toLocaleTimeString();
   },
   todays_date: () => {
-    let date = new Date().toDateString();
-    return date;
-  }
+    let date = new Date();
+    let options = { weekday: "long", month: "long", day: "numeric", year: 'numeric' };
+    return date.toLocaleString("en-US", options);
+  },
 };

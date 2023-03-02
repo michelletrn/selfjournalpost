@@ -1,0 +1,325 @@
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 15px;
+    color: #2f2f2f;
+    background-color: #f9f7f1;
+}
+
+header {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+head {
+    display: inline-block;
+}
+
+a {
+    color: black;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.head {
+    text-align: center;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #2f2f2f;
+    border-top: 2px solid #2f2f2f;
+    padding: 12px 0 12px 0;
+    background-color: #A3A29F;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+}
+.navbar a:hover {
+    color:#bc4045
+}
+.todaysDate {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;  
+}
+.btn-flat {
+    color: white;
+    font-size: large;
+}
+.btnColor {
+    background-color: #bc4045;
+}
+#get-started-btn {
+    display: flex;
+    justify-content: center;
+}
+#get-started-btn:hover {
+    background-color: #4A4946
+}
+.addEntryBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delete-entry:hover {
+    color: red;
+}
+.comment-form {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.articleTitle {
+    font-size: 30px;
+    color: rgb(49, 48, 48);
+}
+
+.articleImage {
+    width: 650px;
+}
+
+.articleAuthor {
+    font-size: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.weatherforcastbox {
+    position: relative;
+    width: 50%;
+    left: 10px;
+    border: 6px double #2f2f2f;
+    padding: 10px 15px 10px 15px;
+    line-height: 20px;
+    margin-left: 100px;
+    margin-bottom: 30px;
+    background-color: #d6d3d3;
+}
+#currentCity, #currentWeather, #weatherIcon {
+    margin-left: 25%;
+}
+
+#signup {
+    padding-top: 50px;
+}
+
+#log-container, #sign-up-container{
+    margin: 50 50;
+    padding: 20px;
+    border-style: solid;
+    border-color: #bc4045;
+}
+
+.content {
+    font-size: 0;
+    line-height: 0;
+    word-spacing: -.31em;
+    display: inline-block;
+    margin: 30px 2% 0 2%;
+}
+
+.media {
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body-blog {
+    font-family: Arial;
+    padding: 20px;
+    background-color: #f9f7f1;
+}
+
+/* Header/Blog Title */
+.blog-header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background-color: #f9f7f1;
+}
+
+.submit-entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.entryCard {
+    width:75%;
+    margin-left: 4%;
+}
+.entry-submit-btn {
+    height: 45px;
+}
+.btn-floating.btn-small {
+    width: 46px;
+    margin-left: 10px;
+}
+
+.addentry-header {
+    font-size: small;
+    text-align: center;
+}
+
+#commentLabel{
+    margin-right: 10px;
+    color: black;
+}
+#comment-text{
+    background-color: #f9f7f1;
+}
+.column {
+    font-size: 14px;
+    line-height: 20px;
+    width: 120%;
+    display: inline-block;
+    padding: 0 1% 0 1%;
+    vertical-align: top;
+    margin-bottom: 50px;
+    transition: all .7s;
+}
+
+.column+.rightcolumn {
+    border-left: 1px solid #2f2f2f;
+}
+
+.material-icons {
+    color: #4A4946;
+    font-size: 65px;
+    display: flex;
+    justify-content: center;
+}
+.pageInfo {
+    font-size: 25px;
+    text-align: center;
+}
+.infoHeader {
+    text-align: center;
+    font-size: 45px;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    margin-left: 50px;
+    margin-top: 30px;
+    float: left;
+    width: 50%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: right;
+    width: 30%;
+    padding-left: 20px;
+    margin-right: 40px;
+    margin-top: 30px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: #d6d3d3;
+    padding: 20px;
+    border: 6px double #2f2f2f;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*________________________________________________________________________________________________________________________________*/
+/*MEDIAQUERIES*/
+@media only all and (max-width: 300px) {
+    .weatherforcastbox {
+        display: none;
+    }
+}
+
+@media only all and (max-width: 1200px) {
+    .collumn {
+        width: 31%;
+    }
+}
+
+@media only all and (max-width: 900px) {
+    .collumn {
+        width: 47%;
+    }
+}
+
+@media only all and (max-width: 600px) {
+    .collumn {
+        width: 100%;
+    }
+
+    /* .collumn+.collumn {
+        border-left: none;
+        border-bottom: 1px solid #2f2f2f;
+    } */
+    header {
+        max-width: 320px;
+        font-size: 60px;
+        line-height: 54px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .articleimg {
+        width: 120%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .articleimg {
+        width: 80%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 500px) {
+    .articleimg {
+        width: 50%;
+        padding: 0;
+    }
+}
