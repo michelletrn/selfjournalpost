@@ -2,38 +2,42 @@
     {
         "id": 2,
         "name": "Jiu Jistu class today",
-        "text": "Got to roll with a new girl in class, which is always fun! Its always nice to see a girl in the dojo, especially when you're surrounded by men all day.",
-        "user_id": 2,
-        "date_created": "2023-01-20 15:48:25"
+        "text": "Got to roll with a new girl in class, which is always fun! Its always nice to see a girl in the dojo, especially when you're surrounded by men every class. Jiu Jistu is a contact sport and requires more technique than strength. I find myself struggling when I roll with the men at the gym but end up feeling overpowered when I go back to someone in my weight range. I am really enjoying the community i'm growing to be a part of and feel so much better about my overall health. I recommend this sport to anyone who is looking for funtional training, body awarness, and overall natural strength. I will warn you though: you'll be walking home with a couple of bumps and bruises from time to time!😅",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1677789333/8248FCE3-C300-413E-849A-DF264519DF1A_1_201_a_dzyidk.jpg",
+        "user_id": 2
     },
     {
         "id": 1,
-        "name": "Nice tea",
-        "text": "I bought some great Green tea at the super market today!",
-        "user_id": 1
+        "name": "Found some Deliciouse Jasmine Tea while on vacation in Vermont!",
+        "text": "While out during our vacation in Vermont with my boyfriend, Anthony, we found a niche vegan deli that had all kinds of vegan products. My favirote part about the place was the smoothie bar in the back of the establishment. It's rare to find a location blending fresh juices and smoothies. I tried their carrot juice, which was delicious, and bought some Jasmine Tea since i remembered I ran out before we left for our vacation. When back home in New Jersey, I had a chance to brew the tea. Let's just say i'll be visiting Vermont more often.",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1677789892/E69F50A2-E2B0-406B-B780-F6BF42BC3079_1_201_a_rli7g1.heic",
+        "user_id": 2
     },
     {
         "id": 3,
         "name": "Went shopping",
-        "text": "Spent too much, I'm broke now lul",
-        "user_id": 3
+        "text": "I just spent the last three months in an intense and demanding coding bootcamp through Rutgers University and i've decided to treat myself with a shopping spree. As convenient as online shopping is, you lose a certain gratifying feeling you get when you purchase items in person. Spring is right around the corner so I decided I needed some sun dresses and new strappy sandels to compliment the dresses. Overall, it was a successful shopping trip and a well deserved one at that. Now back to coding!👩🏻‍💻",
+        "imgeUrl": "https://www.alamy.com/shopping-woman-image274429551.html",
+        "user_id": 1
     },
     {
         "id": 4,
-        "name": "New bench PR",
-        "text": "Hit 200lbs on my 1 rep max!!!!",
-        "user_id": 4
+        "name": "New bench PR record",
+        "text": "I have spent the last year on a health and physical transformation journey and i'd like to share that I have hit my new record of 200lbs on my 5 rep max!! It's been really tougg to be disciplined and motivated to take care of my body the way it deserves. I know that the work doesn't stop here but it's important to take time to celebrate milestones and remind yourself how far you've come. Stay motivated people!",
+        "imageUrl": "https://www.alamy.com/young-dutch-man-bench-press-with-barbell-in-fitness-room-image370669986.html",
+        "user_id": 1
     },
     {
         "id": 5,
         "name": "Coding is hard",
-        "text": "Practice is key",
-        "user_id": 1
+        "text": "Practice make progress. Like everything else in life, you have to be consistantly applying your skills and abilities to strengthen them. Coding is challenging and forces you to think outside the box. Now that I have graduated the coding bootcamp, i'm glad I can slow down and take my time to learn more about different coding languages and programs and continue practicing my code. The way i see it, as long as i'm learning somthing new everyday I can be confident that I am developing my coding skills at my own pace.",
+        "imgageUrl": "",
+        "user_id": 2
     },
     {
         "id": 6,
         "name": "It's so cold outside",
         "text": "Gonna stay home and snuggle with my cats",
-        "user_id": 2
+        "user_id": 1
     }
 ]

@@ -20,12 +20,14 @@ function displayWeather(position) {
       return response.json();
     })
     .then(function (data) {
+      console.log(data)
       var currentCity = data.city.name;
       var currentTemp = data.list[0].main.temp;
       var currentTempFahrenheit = (
         ((currentTemp - 273.15) * 9) / 5 +
         32
       ).toFixed(0);
+      var currentHumidity = data.list[0].main.humidity;
       var currentWeatherIcon = data.list[0].weather[0].icon;
       var weatherIcon = document.getElementById("weatherIcon");
       var imageURL =
@@ -34,7 +36,7 @@ function displayWeather(position) {
       var cityWeather = document.querySelector("#currentWeather");
 
       cityName.textContent = currentCity;
-      cityWeather.textContent = currentTempFahrenheit + "\u00B0F";
+      cityWeather.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F " + "Humidity: " + currentHumidity;
       weatherIcon.setAttribute("src", imageURL);
     });
 }
