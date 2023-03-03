@@ -214,6 +214,7 @@ header {
     margin: 5% 20%;
 }
 .entryCard {
+    margin: 5%;
     display: flex;
     flex-direction: column;
     text-align: center;
