@@ -213,3 +213,8 @@ header {
 .input-field {
     margin: 5% 20%;
 }
+.entryCard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
