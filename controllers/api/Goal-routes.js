@@ -27,7 +27,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
 
         if (!goalData) {
-            res.status(404).json({ message: 'No entry found with this id!' });
+            res.status(404).json({ message: 'No goal found with this id!' });
             return;
         }
 

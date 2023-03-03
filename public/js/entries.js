@@ -12,12 +12,12 @@ const addEntry = async (event) => {
 
   if (newEntryName && newEntryText && file) {
     console.log("form filled out, starting fetch");
-    
-     const formData = new FormData();
-     formData.append("name", newEntryName);
-     formData.append("text", newEntryText);
-     formData.append("file", file);
-    
+
+    const formData = new FormData();
+    formData.append("name", newEntryName);
+    formData.append("text", newEntryText);
+    formData.append("file", file)
+
     const response = await fetch("/api/entry", {
       method: "POST",
       body: formData,
