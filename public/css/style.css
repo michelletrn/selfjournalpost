@@ -205,3 +205,11 @@ header {
 #homepage-join h3{
     margin: 0%;
 }
+
+.login-sign-container {
+    margin: 5% 20%;
+    text-align: center;
+}
+.input-field {
+    margin: 5% 20%;
+}
