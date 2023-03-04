@@ -1,5 +1,5 @@
 # The Self Journal Post v2
-This repo is a copy of my group project, created by myself, Valentina Guavera, Jenna Clementi, and David Yu. Significant changes were made to the application to improve its functionality, including the implementation of Cloudinary for image uploads and a complete visual overhaul for cohesiveness. The original repo is [here.](https://github.com/jennahopeclem/self-journal)
+This repo is a copy of my group project, created by myself, Valentina Guevara, Jenna Clementi, and David Yu. Significant changes were made to the application to improve its functionality, including the implementation of Cloudinary for image uploads and a complete visual overhaul for cohesiveness. The original repo is [here.](https://github.com/jennahopeclem/self-journal)
 
 ## Description
 
