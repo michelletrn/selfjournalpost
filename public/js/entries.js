@@ -26,7 +26,7 @@ const addEntry = async (event) => {
     console.log("RES:", response);
 
     if (response.ok) {
-      document.location.reload();
+      document.location.replace('/entries');
     } else {
       console.log(response.statusText);
       alert(response.statusText);
