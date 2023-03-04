@@ -11,7 +11,7 @@ router.post("/", upload.single("file"), withAuth, async (req, res) => {
   try {
     const file = req.file;
     console.log('file:', file)
-    cloudinary.uploader.upload(file.path, async (error, result) => {
+    cloudinary.uploader.upload(file.path, {folder: "selfjournalpost"}, async (error, result) => {
       if (error) {
         console.error("Cloudinary upload failed");
         return res.statusMessage(500).send("Cloudinary upload failed");
