@@ -10,7 +10,7 @@ const addEntry = async (event) => {
 
   console.log(file);
 
-  if (newEntryName && newEntryText && file) {
+  if (newEntryName && newEntryText) {
     console.log("form filled out, starting fetch");
 
     const formData = new FormData();
