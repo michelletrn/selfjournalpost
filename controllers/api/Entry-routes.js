@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { Entry } = require("../../models");
 const withAuth = require("../../utils/auth");
-const cloudinary = require('cloudinary').v2;
-const multer = require('multer');
+const cloudinary = require("cloudinary").v2;
+const multer = require("multer");
+const { response } = require("express");
 const upload = multer({ dest: "uploads/" });
 
 router.post("/", upload.single("file"), withAuth, async (req, res) => {
@@ -21,18 +22,21 @@ router.post("/", upload.single("file"), withAuth, async (req, res) => {
           }
           const { public_id, secure_url } = result;
           const newEntry = await Entry.create({
-        ...req.body,
-        imageUrl: secure_url,
-        user_id: req.session.user_id,
-      });
+            ...req.body,
+            imageUrl: secure_url,
+            user_id: req.session.user_id,
+          });
+          res.status(200).json(newEntry);
+          console.log(response.statusText)
         }
       );
     } else {
       const newEntry = await Entry.create({
         ...req.body,
         user_id: req.session.user_id,
-      })
-      res.status(200).json(newEntry)
+      });
+      res.status(200).json(newEntry);
+      console.log(response.statusText);
     }
   } catch (err) {
     console.log(err);
