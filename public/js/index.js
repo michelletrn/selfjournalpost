@@ -58,7 +58,7 @@ function hpNews() {
       $(`#f${j}`).children(`#title`).text(data[i].title);
       $(`#f${j}`).children(`#articleImage`).attr("src", data[i].urlToImage);
       $(`#f${j}`).children(`#author`).text(data[i].author);
-      $(`#f${j}`).children(`#publishDate`).text(data[i].publishedAt);
+      $(`#f${j}`).children(`#publishDate`).text(data[i].publishedAt.split('T')[0]);
       $(`#f${j}`).children(`#content`).text(data[i].content);
       $(`#f${j}`).children(`#articleUrl`).text("Full Article Here").attr("href", data[i].url);
       i++

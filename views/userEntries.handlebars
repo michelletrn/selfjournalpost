@@ -1,6 +1,8 @@
 <div class="entries-page-container row">
   <div class="entry-container col s8">
+
     {{#each entries as |entry|}}
+    <button class="btn delete-entry grey" data-delete-entry-id="{{id}}">Delete Entry</button>
     {{> entry-details}}
 
     <div class="comments-container card">
@@ -23,13 +25,14 @@
   <div class="col s4">
     <div class="card entry-action">
       <div>
-      <h5>Write Entry:</h5>
-      <a href="/entry" class="btn-floating btn-medium waves-effect waves-light btn"><i class='bx bxs-edit'></i></a>
+        <h5>Write Entry:</h5>
+        <a href="/entry" class="btn-floating btn-medium waves-effect waves-light btn"><i class='bx bxs-edit'></i></a>
       </div>
-      <br/>
+      <br />
       <div>
-      <h5>My Entries:</h5>
-      <a href="/userentries" class="btn-floating btn-medium waves-effect waves-light btn"><i class='bx bx-file-find'></i></a>
+        <h5>My Entries:</h5>
+        <a href="/userentries" class="btn-floating btn-medium waves-effect waves-light btn"><i
+            class='bx bx-file-find'></i></a>
       </div>
     </div>
 
