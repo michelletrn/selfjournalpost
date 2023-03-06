@@ -14,10 +14,12 @@ const seedDatabase = async () => {
         returning: true,
     });
 
-    const entries = await Entry.bulkCreate(entryData, {
-        user_id: users.id,
-        returning: true
-    })
+    for (const entry of entryData) {
+        await Entry.create({
+            ...entry,
+            returning: true
+        })
+    }
 
     for (const goal of goalsData) {
         await Goal.create({
@@ -37,3 +39,4 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
