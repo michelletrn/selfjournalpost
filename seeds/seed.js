@@ -17,7 +17,6 @@ const seedDatabase = async () => {
     for (const entry of entryData) {
         await Entry.create({
             ...entry,
-            user_id: users.id,
             returning: true
         })
     }
