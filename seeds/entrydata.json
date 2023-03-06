@@ -4,41 +4,47 @@
         "name": "Jiu Jistu class today",
         "text": "Got to roll with a new girl in class, which is always fun! It is always nice to see a girl in the dojo, especially when you are surrounded by men every class. I find myself being evenly matched when I go back to someone in my weight range.",
         "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1677789333/8248FCE3-C300-413E-849A-DF264519DF1A_1_201_a_dzyidk.jpg",
+        "date_created": "2023-02-09 19:24:23",
         "user_id": 2
     },
     {
         "id": 1,
         "name": "Found some Delicious Jasmine Tea while on vacation in Vermont!",
         "text": "While out during our vacation in Vermont with my boyfriend, Anthony, we found a niche vegan deli that had all kinds of vegan products and a smoothie bar in the back of the establishment. I enjoyed their carrot juice and Jasmine Tea.🫖",
-        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1677789892/E69F50A2-E2B0-406B-B780-F6BF42BC3079_1_201_a_rli7g1.heic",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1678131444/selfjournalpost/o62nu1zskccr5t3kn0t2.jpg",
+        "date_created": "2023-02-12 19:24:23",
         "user_id": 2
     },
     {
         "id": 3,
-        "name": "Went shopping tday!",
+        "name": "Went shopping today!",
         "text": "I just spent the last three months in an intense and demanding coding bootcamp and I have decided to treat myself with a shopping spree. Spring is right around the corner so I decided I needed some sun dresses and new strappy sandels. Now back to coding!",
-        "imageUrl": "https://www.alamy.com/shopping-woman-image274429551.html",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1678131810/selfjournalpost/shopping-woman-WXD9KB_u6s6mo.jpg",
+        "date_created": "2023-02-01 19:24:23",
         "user_id": 1
     },
     {
         "id": 4,
         "name": "New bench PR record",
         "text": "I've spent the last year on a health/physical journey and i'd like to share that i've hit my new record of 200lbs on my 5 rep max!! It's been really tough to be disciplined and motivated but I know that the work does not stop here. Celebrate your success!",
-        "imageUrl": "https://www.alamy.com/young-dutch-man-bench-press-with-barbell-in-fitness-room-image370669986.html",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1678131732/selfjournalpost/young-dutch-man-bench-press-with-barbell-in-fitness-room-2CF1D9P_asfcvg.jpg",
+        "date_created": "2023-02-14 19:24:23",
         "user_id": 1
     },
     {
         "id": 5,
         "name": "Coding is hard",
         "text": "Practice make progress. Now that I have graduated the coding bootcamp, I am glad I can slow down and take my time to learn more about different coding languages and programs and continue practicing my code.",
-        "imageUrl": "https://www.alamy.com/close-up-of-coding-on-laptop-image269707844.html",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1678131677/selfjournalpost/close-up-of-coding-on-laptop-WJP730_fd5mkr.jpg",
+        "date_created": "2023-01-09 19:24:23",
         "user_id": 2
     },
     {
         "id": 6,
         "name": "It's so cold outside!",
         "text": "Today is a cold day in Jersey and I think I am just going to spend the day indoors with my cats. They are the perfect heat pouch to warm any cold toes and they are cuddly little guys that are perfect for any movie night.",
-        "imageUrl": "https://www.alamy.com/stock-photo-two-gray-and-brown-striped-cats-cuddling-in-a-chair-107753570.html",
+        "imageUrl": "https://res.cloudinary.com/dkhyibthn/image/upload/v1678131776/selfjournalpost/two-gray-and-brown-striped-cats-cuddling-in-a-chair-G78GNP_wvqc6j.jpg",
+        "date_created": "2023-01-16 19:24:23",
         "user_id": 1
     }
 ]

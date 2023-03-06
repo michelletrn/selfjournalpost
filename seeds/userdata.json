@@ -26,5 +26,12 @@
         "last_name": "Y",
         "email": "david@test.com",
         "password": "password"
+    },
+    {
+        "id": 5,
+        "first_name": "User",
+        "last_name": "User",
+        "email": "user@test.com",
+        "password": "password"
     }
 ]

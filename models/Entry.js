@@ -16,8 +16,7 @@ Entry.init(
       allowNull: false,
     },
     text: {
-      type: DataTypes.STRING,
-      varchar: 200,
+      type: DataTypes.TEXT('long'),
       allowNull: false,
     },
     imageUrl: {
