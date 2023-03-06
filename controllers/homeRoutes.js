@@ -2,12 +2,14 @@ const router = require("express").Router();
 const { Goal, Entry, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 const axios = require("axios");
+const { format_date } = require("../utils/helpers");
 
 router.get("/", async (req, res) => {
   try {
     console.log("GET /");
     const entryData = await Entry.findAll({
       order: [["date_created", "DESC"]],
+      limit: 10,
       include: [
         {
           model: User,
@@ -75,36 +77,20 @@ router.get("/entries", withAuth, async (req, res) => {
       ],
     });
     // console.log(entryData);
+    const userGoals = await Goal.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const goals = userGoals.map((goal) => goal.get({ plain:true }));
+    console.log(goals);
 
     const entries = entryData.map((entry) => entry.get({ plain: true }));
 
     res.render("entries", {
       entries,
+      goals,
       logged_in: true,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-// single entry
-router.get("/entries/:id", async (req, res) => {
-  try {
-    const entryData = await Entry.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attribute: ["first_name", "last_name"],
-        },
-      ],
-    });
-
-    const entry = entryData.get({ plain: true });
-
-    res.render("entries", {
-      ...entry,
-      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
@@ -133,31 +119,20 @@ router.get("/userentries", withAuth, async (req, res) => {
         },
       ],
     });
-    // console.log(postData)
+    // console.log(entriesData)
+    const userGoals = await Goal.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const goals = userGoals.map((goal) => goal.get({ plain: true }));
+    // console.log(goals);
 
     const entries = entriesData.map((entry) => entry.get({ plain: true }));
-    // console.log(entries);
+    console.log(entries);
     res.render("userEntries", {
       entries,
-      logged_in: true,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-
-router.get("/wellness", withAuth, async (req, res) => {
-  try {
-    const wellnessData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ["password"] },
-      include: [{ model: Goal }],
-    });
-
-    const wellness = wellnessData.get({ plain: true });
-
-    res.render("wellness", {
-      ...wellness,
+      goals,
       logged_in: true,
     });
   } catch (err) {

@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const { Entry } = require("../../models");
 const withAuth = require("../../utils/auth");
-const cloudinary = require('cloudinary').v2;
-const multer = require('multer');
+const cloudinary = require("cloudinary").v2;
+const multer = require("multer");
+const { response } = require("express");
 const upload = multer({ dest: "uploads/" });
 
 router.post("/", upload.single("file"), withAuth, async (req, res) => {
@@ -10,22 +11,33 @@ router.post("/", upload.single("file"), withAuth, async (req, res) => {
 
   try {
     const file = req.file;
-    console.log('file:', file)
-    cloudinary.uploader.upload(file.path, async (error, result) => {
-      if (error) {
-        console.error("Cloudinary upload failed");
-        return res.statusMessage(500).send("Cloudinary upload failed");
-      }
-      const { public_id, secure_url } = result;
-
+    if (file) {
+      cloudinary.uploader.upload(
+        file.path,
+        { folder: "selfjournalpost" },
+        async (error, result) => {
+          if (error) {
+            console.error("Cloudinary upload failed");
+            return res.statusMessage(500).send("Cloudinary upload failed");
+          }
+          const { public_id, secure_url } = result;
+          const newEntry = await Entry.create({
+            ...req.body,
+            imageUrl: secure_url,
+            user_id: req.session.user_id,
+          });
+          res.status(200).json(newEntry);
+          console.log(response.statusText)
+        }
+      );
+    } else {
       const newEntry = await Entry.create({
         ...req.body,
-        imageUrl: secure_url,
         user_id: req.session.user_id,
       });
-
       res.status(200).json(newEntry);
-    });
+      console.log(response.statusText);
+    }
   } catch (err) {
     console.log(err);
     res.status(400).json(err);
