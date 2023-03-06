@@ -1,6 +1,6 @@
 <div class="row home-content">
   <div class="articles-container">
-    <div class="col s4">
+    <div class="col s5">
       <div class="card article" id="f0">
         {{! <h5 id="author" class="articleAuthor"></h5> }}
         <h5 id="title" class="articleTitle"></h5>
@@ -46,9 +46,6 @@
         <a id="articleUrl" target="_blank"></a>
       </div>
       <div class="divider"></div>
-    </div>
-
-    <div class="col s4">
       <div class="card article" id="f5">
         {{! <h5 id="author" class="articleAuthor"></h5> }}
         <h5 id="title" class="articleTitle"></h5>
@@ -97,7 +94,7 @@
     </div>
   </div>
 
-  <div class="info-container col s4">
+  <div class="info-container col s7">
     <div class="weatherforcastbox card">
       <p id="currentCity"></p>
       <p id="currentWeather"></p>
@@ -105,60 +102,56 @@
       <span style="font-style: italic;"></span>
     </div>
     {{! both links redirect to add entry page if the user was logged in, and if they were logged out it took them to the
-  login page, this is redundant so I made one to display when they are either logged in or out }}
+    login page, this is redundant so I made one to display when they are either logged in or out }}
     {{#if logged_in}}
-      <div class="entry-container">
-        {{#each entries as |entry|}}
-        {{> entry-details}}
-        <p>Comments for {{name}}:</p>
-        <div class="comments-container card">
-          <form class="form new-comment-form">
-              <label for="comment-text" id="commentLabel">Comment:</label>
-              <textarea
-                class="form-input"
-                id="comment-text"
-                name="comment-text"
-              ></textarea>
-              <button
-                type="submit"
-                class="addComment btn-floating btn-small waves-effect waves-light btnColor"
-                data-entry-id="{{id}}"
-              >+</button>
-          </form>
-          {{#each entry.comments as |comment|}}
-          {{> comment-details }}
-          {{/each}}
-        </div>
-        <hr/>
+    <div class="entry-container">
+      <h5>Posts made by users:</h5>
+      {{#each entries as |entry|}}
+      {{> entry-details}}
+
+      <div class="comments-container card">
+        <label for="comment-text" id="commentLabel"> Add a Comment:</label>
+        <form class="form new-comment-form">
+          <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
+          <button type="submit" class="addComment btn-floating btn-small waves-effect waves-light btn"
+            data-entry-id="{{id}}">+</button>
+        </form>
+        <label for="comment-text" id="commentLabel">Comments for "{{name}}":</label>
+        {{#each entry.comments as |comment|}}
+        {{> comment-details }}
         {{/each}}
       </div>
-    {{else}}
-      <div class="card" id="homepage-join">
-        <h3 class="infoHeader">Join the Post!</h3>
-        <div>
-          <ul>
-            <li>
-              <p class="pageInfo">Share thoughts or ideas!</p>
-              <i class="material-icons">note_add</i>
-            </li>
-            <li>
-              <p class="pageInfo">Keep up with daily top news articles</p>
-              <i class="material-icons">language</i>
-            </li>
-            <li>
-              <p class="pageInfo">Comment and offer encouraging words on other
-                entries</p>
-              <i class="material-icons">mode_comment</i>
-            </li>
-          </ul>
-        </div>
-        {{! changed the href to signup when they click get started }}
-        <a href="/signup" class="btn btnColor" id="get-started-btn">Get Started</a>
-      </div>
-      {{#each entries as |entry|}}
-        {{> entry-details}}
+      <div class="divider"></div>
       {{/each}}
-    {{/if}}
+    </div>
+    {{else}}
+    <div class="card" id="homepage-join">
+      <h3 class="infoHeader">Join the Post!</h3>
+      <ul>
+        <li>
+          <p class="pageInfo">Share thoughts, ideas, or life events with other users!</p>
+          <i class="material-icons">note_add</i>
+        </li>
+        <li>
+          <p class="pageInfo">Keep up with daily life events!</p>
+          <i class="material-icons">language</i>
+        </li>
+        <li>
+          <p class="pageInfo">Comment or offer encouraging words on user
+            entries!</p>
+          <i class="material-icons">mode_comment</i>
+        </li>
+      </ul>
+      <a href="/signup" class="btn btnColor" id="get-started-btn">Get Started</a>
+    </div>
+    <div class="entry-container">
+      <h5>ENTRY POSTS</h5>
+      {{#each entries as |entry|}}
+      {{> entry-details}}
+      <div class="divider"></div>
+      {{/each}}
+      {{/if}}
+    </div>
   </div>
 </div>
 

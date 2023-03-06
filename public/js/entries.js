@@ -10,14 +10,14 @@ const addEntry = async (event) => {
 
   console.log(file);
 
-  if (newEntryName && newEntryText && file) {
+  if (newEntryName && newEntryText) {
     console.log("form filled out, starting fetch");
-    
-     const formData = new FormData();
-     formData.append("name", newEntryName);
-     formData.append("text", newEntryText);
-     formData.append("file", file);
-    
+
+    const formData = new FormData();
+    formData.append("name", newEntryName);
+    formData.append("text", newEntryText);
+    formData.append("file", file)
+
     const response = await fetch("/api/entry", {
       method: "POST",
       body: formData,
@@ -26,7 +26,7 @@ const addEntry = async (event) => {
     console.log("RES:", response);
 
     if (response.ok) {
-      document.location.reload();
+      document.location.replace('/entries');
     } else {
       console.log(response.statusText);
       alert(response.statusText);

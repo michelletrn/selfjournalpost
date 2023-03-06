@@ -12,12 +12,19 @@ a {
 }
 /* applies to all imgs */
 img {
-    max-width: 400px;
+    max-width: 85%;
     filter: grayscale(60%);
 }
 /* applies to all materialize icons */
 .material-icons {
     cursor: pointer;
+}
+/* applies to all btns */
+.btn {
+    background-color: #5d5c5c;
+}
+.btn:hover {
+    background-color: #8a8a8a;
 }
 
 header {
@@ -116,6 +123,12 @@ header {
 }
 .new-comment-form {
     padding: 1% 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.new-comment-form textarea {
+    width: 90%;
 }
 .comments {
     padding: 0 1%;
@@ -133,4 +146,76 @@ header {
 .removeComment {
     font-size: 20px;
     cursor: pointer;
+}
+
+.active-goals h4 {
+    text-align: center;
+    padding: 1%;
+}
+.goal-container {
+    padding: 2%;
+}
+.goal-container h4 {
+    margin: 0;
+    font-size: 20px;
+}
+.goal {
+    padding: 0 5%;
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.goal p {
+    width: 75%;
+}
+.goal:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.goal-btn {
+    font-size: 10px;
+    padding: 0 5px;
+}
+
+.entry-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5%;
+}
+.entry-action h5 {
+    font-size: 20px;
+    margin: 1% 0;
+}
+.entry-container h5 {
+    text-align: center;
+}
+
+#homepage-join {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#homepage-join i {
+    font-size: 60px;
+}
+#homepage-join h3{
+    margin: 0%;
+}
+
+.login-sign-container {
+    margin: 5% 20%;
+    text-align: center;
+}
+.input-field {
+    margin: 5% 20%;
+}
+.entryCard {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

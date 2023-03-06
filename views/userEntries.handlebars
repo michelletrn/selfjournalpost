@@ -1,90 +1,61 @@
-<div class="body-blog">
-  <div class="row">
-    <div class="column">
-      <div class="card entryCard">
-        <div class="addentry-header">
-          <h2>Add an Entry</h2>
-        </div>
-        <div class="row">
-          <form class="col s12" enctype="multipart/form-data"
-                method="POST"
-                action="/api/entry">
-            <div class="submit-entry">
-              <div class="row">
-                <div class="input-field col s12">
-                  <input
-                    class="new-entry-title"
-                    id="input_text"
-                    type="text"
-                    data-length="10"
-                    name="name"
-                  />
-                  <label for="input_text">Enter Entry Title</label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12">
-                  <textarea
-                    id="textarea2"
-                    class="materialize-textarea new-entry-text"
-                    data-length="250"
-                    name="text"
-                  ></textarea>
-                  <label for="textarea2">Enter Entry text</label>
-                </div>
-              </div>
-              <br />
-              <div class="row">
-               <div class="file-field input-field">
-                  <div class="btn">
-                    <span>File</span>
-                    <input type="file" name="photo" />
-                  </div>
-                  <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" />
-                  </div>
-              </div>
-              <button
-                type="submit"
-                class="waves-effect waves-light btn btnColor"
-                id="entry-btn"
-              >Submit Entry</button>
-            </div>
-          </form>
-        </div>
+<div class="entries-page-container row">
+  <div class="entry-container col s8">
+    {{#each entries as |entry|}}
+    {{> entry-details}}
+
+    <div class="comments-container card">
+      <label for="comment-text" id="commentLabel"> Add a Comment:</label>
+      <form class="form new-comment-form">
+        <textarea class="form-input" id="comment-text" name="comment-text"></textarea>
+        <button type="submit" class="addComment btn-floating btn-small waves-effect waves-light btn"
+          data-entry-id="{{id}}">+</button>
+      </form>
+      <label for="comment-text" id="commentLabel">Comments for "{{name}}":</label>
+      {{#each entry.comments as |comment|}}
+      {{> comment-details }}
+      {{/each}}
+    </div>
+    <hr />
+    <br />
+    {{/each}}
+  </div>
+
+  <div class="col s4">
+    <div class="card entry-action">
+      <div>
+      <h5>Write Entry:</h5>
+      <a href="/entry" class="btn-floating btn-medium waves-effect waves-light btn"><i class='bx bxs-edit'></i></a>
       </div>
+      <br/>
+      <div>
+      <h5>My Entries:</h5>
+      <a href="/userentries" class="btn-floating btn-medium waves-effect waves-light btn"><i class='bx bx-file-find'></i></a>
+      </div>
+    </div>
+
+
+    <div class="card goal-container">
+      <div class="active-goals">
+        <h4>Goals:</h4>
+        {{#each goals as |goal|}}
+        <div class="goal">
+          <p>{{goal.goal}}</p>
+          <button class="btn-floating btn-small waves-effect waves-light btn"><i class="bx bx-trash deleteGoal"
+              data-deleteGoal-id="{{id}}"></i></button>
+        </div>
+        {{/each}}
+        <hr>
+      </div>
+      <form class="submit-goal">
+        <label for="goal-input">Enter Goal</label>
+        <input class="new-goal-title" id="goal-text" type="text" data-length="10" placeholder="homework">
+        <button type="submit" class="btn" id="goal-btn">Add Goal</button>
+      </form>
     </div>
   </div>
 </div>
 
-{{#each entries as |entry|}}
-{{> userEntries-details}}
-<div class="col-md-3 card comments">
-<p>Comments for {{name}}</p>
-<form class="form new-comment-form">
-            <div class="form-group comment-form">
-              <label for="comment-text" id="commentLabel">Comment:</label>
-              <textarea
-                class="form-input"
-                id="comment-text"
-                name="comment-text"
-              ></textarea>
-              <button
-                type="submit"
-                class="addComment btn-floating btn-small waves-effect waves-light btnColor"
-                data-entry-id="{{id}}"
-              >+</button>
-            </div>
-          </form>
-{{#each entry.comments as |comment|}}
-{{> userEntriesComment-details}}
-{{/each}}
-</div>
-
-{{/each}}
-
-</div>
-
 <script src="/js/comment.js"></script>
 <script src="/js/deleteEntries.js"></script>
+<script src="/js/wellness.js"></script>
 <script src="/js/entries.js"></script>

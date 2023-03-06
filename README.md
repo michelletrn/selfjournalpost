@@ -1,38 +1,56 @@
-# The Self Journal Post
-This repo is a copy of my group project, original [here](https://github.com/jennahopeclem/self-journal)
+# The Self Journal Post v2
+This repo is a copy of my group project, created by myself, Valentina Guevara, Jenna Clementi, and David Yu. Significant changes were made to the application to improve its functionality, including the implementation of Cloudinary for image uploads and a complete visual overhaul for cohesiveness. The original repo is [here.](https://github.com/jennahopeclem/self-journal)
 
 ## Description
 
-This application is used to create journals that can be public and private, depending on the users choice. When users sign up for an account, they are able to access features that would otherwise be unavailable to them. For instance, they can access the wellness page that was created in order to keep track of their personal goals and commitments. The functionality of this website serves to create a platform where users are able to keep or share journal entries that translates their thoughts and feelings into text. Our goal was to create a forum-like setting that would connect other users to share and communicate with each other, via their public journal posts.
+The Self Journal Post is a web application that allows users to create and share their journal entries with pictures. It uses MySQL and Sequelize for the database, Handlebars as the view engine, Node.js, and Express.js to build REST API. This project is a repo that was copied from a group project that Valentina and I were a part of. We decided to create a copy of the original (linked above) and made changes to completely revamp the page visually to give users a better experience and also implemented Cloudinary to enable users to be able to upload pictures with their posts.
 
-Our group decided to create this application, as we feel that it is very useful for users who would like to have a personalized journal tracking their personal progress. The simple webpage functionality allows any user to create an account on our site and begin creating journal entries. Creating this project allowed us to practice all of the different concepts in the course and apply it to a real world application. Also, we were able to gain more of an understanding working in a team setting.
-
-Link: [Self Journal Post](https://self-journal-post.herokuapp.com/ 'An app to record journals in a forum-like setting.') 
+Link: [Self Journal Post (link to deployment coming soon!)]() 
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Contributing](#contributing)
 - [Credits](#credits)
 - [License](#license)
 
 ## Installation
+To get started with The Self Journal Post, you need to have Node.js and MySQL installed on your machine. You also need to have a Cloudinary account to enable picture uploads.
 
-N/A
+1. Clone the repository to your local machine using git clone.
+
+2. Install dependencies by running npm install.
+
+3. Create a .env file at the root of the project and add your MySQL and Cloudinary credentials in the following format:
+    + DB_NAME=your_database_name
+    + DB_USER=your_database_username
+    + DB_PASSWORD=your_database_password
+    + CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+    + CLOUDINARY_API_KEY=your_cloudinary_api_key
+    + CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+
+4. Start the server by running npm start.
 
 ## Usage
 
-When opening the web application, we are presented with the homepage that contains a navbar that contains a home, login, and sign up redirects. Underneath the navbar, we can see public entry posts from all users, that shows the date, username, and journal posts. On the right hand side, we have added cards that displays the weather  When going into the sign up page, users are given fields to enter their first name, last name, email, and password in order to create and account. When succesfully creating an account, the navbar will reflect additional options, such as entries, wellness, and logout redirects. The entries page is where users can add and save journal entries. In the right column, we are able to see three daily goals that users can track and visualize. The wellness page is where users can track their goals and mood, which are then saved for that day. The logout redirect will sign users out of their accounts and bring them back to the default homepage.
+Once the server is running, you can access the web application in your browser by navigating to http://localhost:3001. From there, you can create an account, log in, and start creating and sharing your journal entries with pictures.
+![journal-ss](./images/journalpost.png)
 
-![journal-ss](./images/journal-ss.png)
+## Contributing
+Contributions to The Self Journal Post are welcome! To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive commit messages.
+4. Push your changes to your fork.
+5. Submit a pull request.
 
 ## Credits
 
-- Link: [Valentina Guevara](https://github.com/Val-gee 'Github page for Valentina Guevara')
-- Link: [Jenna Clementi](https://github.com/jennahopeclem 'Github page for Jenna Clementi')
 - Link: [Michelle Tran](https://github.com/michelletrn 'Github page for Michelle Tran')
-- Link: [David Yu](https://github.com/Dyu4848 'Github page for David Yu')
+- Link: [Valentina Guevara](https://github.com/Val-gee 'Github page for Valentina Guevara')
 
 ## License
 
-N/A
+The Self Journal Post is licensed under the MIT License.
