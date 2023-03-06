@@ -2,7 +2,6 @@
   <div class="entry-container col s8">
 
     {{#each entries as |entry|}}
-    <button class="btn delete-entry grey" data-delete-entry-id="{{id}}">Delete Entry</button>
     {{> entry-details}}
 
     <div class="comments-container card">
@@ -17,6 +16,8 @@
       {{> comment-details }}
       {{/each}}
     </div>
+    <button class="btn delete-entry grey" data-delete-entry-id="{{id}}">Delete Entry</button>
+
     <hr />
     <br />
     {{/each}}
