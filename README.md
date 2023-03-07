@@ -5,7 +5,7 @@ This repo is a copy of my group project, created by myself, Valentina Guevara, J
 
 The Self Journal Post is a web application that allows users to create and share their journal entries with pictures. It uses MySQL and Sequelize for the database, Handlebars as the view engine, Node.js, and Express.js to build REST API. This project is a repo that was copied from a group project that Valentina and I were a part of. We decided to create a copy of the original (linked above) and made changes to completely revamp the page visually to give users a better experience and also implemented Cloudinary to enable users to be able to upload pictures with their posts.
 
-Link: [Self Journal Post (link to deployment coming soon!)]() 
+Link: [Self Journal Post](https://selfjournalpost.herokuapp.com/) 
 
 ## Table of Contents
 
