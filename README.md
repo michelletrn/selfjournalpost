@@ -33,6 +33,9 @@ To get started with The Self Journal Post, you need to have Node.js and MySQL in
 4. Start the server by running npm start.
 
 ## Usage
+Explore the Self Journal Post with this login:
+Email: user@test.com
+Password: password
 
 Once the server is running, you can access the web application in your browser by navigating to http://localhost:3001. From there, you can create an account, log in, and start creating and sharing your journal entries with pictures.
 ![journal-ss](./images/journalpost.png)
