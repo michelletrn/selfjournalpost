@@ -36,7 +36,12 @@ function displayWeather(position) {
       var cityWeather = document.querySelector("#currentWeather");
 
       cityName.textContent = currentCity;
-      cityWeather.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F " + "Humidity: " + currentHumidity;
+
+      var temp = document.createElement('p');
+      temp.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F"
+
+      cityWeather.appendChild(temp);
+      // cityWeather.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F " + "Humidity: " + currentHumidity;
       weatherIcon.setAttribute("src", imageURL);
     });
 }
