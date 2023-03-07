@@ -26,7 +26,10 @@ img {
 .btn:hover {
     background-color: #8a8a8a;
 }
-
+.delete-entry {
+    position: sticky;
+    left: 1000;
+}
 header {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
