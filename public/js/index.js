@@ -27,7 +27,12 @@ function displayWeather(position) {
         ((currentTemp - 273.15) * 9) / 5 +
         32
       ).toFixed(0);
+      var tempFeelsLike = data.list[0].main.feels_like;
+      var currentTempFeelsLike = (
+        ((tempFeelsLike - 273.15)* 9) / 5 + 32
+        ).toFixed(0);
       var currentHumidity = data.list[0].main.humidity;
+      var currentWindSpeed = data.list[0].wind.speed;
       var currentWeatherIcon = data.list[0].weather[0].icon;
       var weatherIcon = document.getElementById("weatherIcon");
       var imageURL =
@@ -40,8 +45,20 @@ function displayWeather(position) {
       var temp = document.createElement('p');
       temp.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F"
 
+      var tempFeel = document.createElement('p');
+      tempFeel.textContent = "Feels like: " + currentTempFeelsLike + "°F"
+
+      var humidity = document.createElement('p');
+      humidity.textContent = "Humidity: " + currentHumidity + "%"
+
+      var wind = document.createElement('p');
+      wind.textContent = "Wind Speed: " + currentWindSpeed + " mph"
+
       cityWeather.appendChild(temp);
-      // cityWeather.textContent = "Temp: " + currentTempFahrenheit + "\u00B0F " + "Humidity: " + currentHumidity;
+      cityWeather.appendChild(tempFeel);
+      cityWeather.appendChild(humidity);
+      cityWeather.appendChild(wind);
+    
       weatherIcon.setAttribute("src", imageURL);
     });
 }
